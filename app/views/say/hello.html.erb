@@ -4,4 +4,15 @@
   It is now <%= @time %>
 </p>
 
-<%= link_to "Say Goodbye", say_goodbye_path %>
++1 hour: <%= 1.hour.from_now.localtime %>
+
+<p>
+  Time to say <%= link_to "Goodbye", say_goodbye_path %>!
+</p>
+
+List of files:
+<% @files.each do |file| %>
+  <ul>
+    <li><%= file %></li>
+  </ul>
+<% end %>
